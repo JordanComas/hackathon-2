@@ -16,7 +16,7 @@ function App() {
       <header>
         <nav>
           <Link to="/">
-            <img height="70" src={logo} alt="nav-logo" />
+            <img className="logo" height="70" src={logo} alt="nav-logo" />
           </Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
