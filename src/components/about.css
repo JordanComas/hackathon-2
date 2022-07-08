@@ -1,0 +1,15 @@
+p {
+  display: flex;
+  color: #2b3135;
+  font-size: 16px;
+  width: 500px;
+  justify-content: center;
+  align-content: center;
+  padding-left: 450px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

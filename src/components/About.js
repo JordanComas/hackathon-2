@@ -1,4 +1,5 @@
 import React from "react";
+import "../components/about.css";
 
 const About = () => {
   return (
@@ -28,4 +29,3 @@ const About = () => {
 };
 
 export default About;
- 
