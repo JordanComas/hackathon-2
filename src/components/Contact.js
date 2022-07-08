@@ -7,6 +7,7 @@ const Contact = () => {
   const [email, setEmail] = React.useState("");
   const [status, setStatus] = React.useState("");
   const [statusTwo, setStatusTwo] = React.useState("");
+  const [desc, setDesc] = React.useState("");
 
   const postMessage = (e) => {
     e.preventDefault();
@@ -15,6 +16,7 @@ const Contact = () => {
     setPhone("");
     setStatus("");
     setEmail("");
+    setDesc("");
     setStatus("Message Sent!");
     setStatus(
       "Thank you for reaching out. We will be intouch with you shortly."
@@ -65,8 +67,8 @@ const Contact = () => {
           columns="100"
           type="text"
           placeholder="Details"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={desc}
+          onChange={(e) => setDesc(e.target.value)}
         ></textarea>
         <br></br>
         <button className="contactbutton" type="submit">

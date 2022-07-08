@@ -47,7 +47,7 @@ const Login = () => {
         <label>
           I accept <Link to="/termsconditions">Terms &amp; Conditions</Link>
         </label>
-        <div>
+        <div className="login-btn">
           <Link to="/">
             <button onClick={check}>LogIn</button>
           </Link>
