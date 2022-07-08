@@ -6,17 +6,32 @@ import Contact from "./components/Contact";
 import Login from "./components/Login";
 import NotFound from "./components/NotFound";
 import About from "./components/About";
+import logo from "./images/logo.png";
+import Footer from "./components/Footer";
+import TermsConditions from "./components/TermsConditions";
 
 function App() {
   return (
     <div className="App">
+      <header>
+        <nav>
+          <Link to="/">
+            <img height="70" src={logo} alt="nav-logo" />
+          </Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/login">Log In</Link>
+        </nav>
+      </header>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/termsconditions" element={<TermsConditions />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

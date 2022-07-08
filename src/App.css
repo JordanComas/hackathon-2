@@ -38,6 +38,7 @@
   }
 }
 
+
 body {
   background-color:rgb(140, 34, 108)
 }
@@ -56,4 +57,36 @@ h1 {
 p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #61dafb;
+}
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: blue;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+}
+
+.about p {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin: 50px;
+
 }

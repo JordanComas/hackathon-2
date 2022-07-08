@@ -1,0 +1,26 @@
+[ {
+    "name": "buick",
+    "image": "https://www.cars.com/research/buick-lacrosse-2015/"},
+    {
+    "name": "Mini",
+    "image": "https://www.bmwgroup.com/en/brands-and-services/mini.html"},
+    {
+    "name": "Volvo",
+    "image":"https://www.volvocars.com/images/v/-/media/applications/offersapp/us/promotionimages/xc90.jpg?h=1440&iar=0&w=2560"},
+    { 
+    "name": "Ford",
+    "image": "https://www.picpng.com/ford-png-28881"},
+    {
+    "name": "Hummer",
+    "image": "https://insideevs.com/news/450345/gm-admits-no-gmc-hummer-ev-exists-yet/"},
+    {
+    "name": "GMC",
+    "image": "https://www.thedrive.com/news/2023-gmc-sierra-1500-at4x-aev-edition-is-a-silverado-bison-by-another-name"},
+    {
+    "name": "Subaru",
+    "image": "https://cdn.motor1.com/images/mgl/MQPEn/s1/subaru-wrx-sti-ej20-final-edition.webp"},
+    { 
+    "name": "Mitsubishi",
+    "image": "https://www.motor1.com/news/574159/2022-mitsubishi-outlander-black-edition/"}
+
+]

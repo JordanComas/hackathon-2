@@ -3,7 +3,11 @@ import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 const Home = () => {
 
+
   return  (<div className="home">
+
+  return (<div className="home">
+
     <br></br>
 
    <h1> IRONLUX TOYS </h1>
@@ -14,6 +18,7 @@ const Home = () => {
  <Link to="/about">
        <button id="btn">Search Vehicles</button>
        </Link>  
+
 
 
   </div>
