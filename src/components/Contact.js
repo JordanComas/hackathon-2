@@ -1,14 +1,5 @@
 import React from "react";
 const Contact = () => {
-  return  (<div className="home">
-   
-
-
-  </div>
-
-)};
-
-=======
   const [firstName, setfirstName] = React.useState("");
   const [lastName, setlastName] = React.useState("");
   const [phone, setPhone] = React.useState("");
@@ -69,6 +60,5 @@ const Contact = () => {
     </div>
   );
 };
-
 
 export default Contact;

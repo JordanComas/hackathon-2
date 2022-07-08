@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-image: 
+  /* background-image: ; */
 }
 
 .App-logo {
@@ -38,31 +38,26 @@
   }
 }
 
-
 table {
   margin: 20px;
   align-items: left;
   border: 1px solid;
-
-
-body {
-  background-color:rgb(140, 34, 108)
 }
 
 .home {
   background-color: aqua;
   padding-top: 50px;
-  width:100em;
+  width: 100em;
   height: 30em;
 }
 h1 {
-  border:2px solid black ;
-
+  border: 2px solid black;
 }
 
 p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
+}
 nav {
   display: flex;
   flex-direction: row;
@@ -94,5 +89,4 @@ nav a:hover {
   flex-direction: column;
   width: 700px;
   margin: 50px;
-
 }
