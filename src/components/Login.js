@@ -1,15 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [status, setStatus] = React.useState("");
 
-  const newPassword = (e) => {
-    e.preventDefault();
-    setPassword(password);
+  const navigate = useNavigate();
+
+  const navigateCreate = () => {
+    navigate("/");
+  };
+
+  const check = (e) => {
     if (password.length < 20) {
-      // return "Password too short";
-      console.log("passowrd 2 short");
+      e.preventDefault();
+      setStatus("Password 2 short");
+    } else {
+      navigateCreate();
     }
   };
 
@@ -34,9 +43,15 @@ const Login = () => {
           ></input>
         </div>
         <input type="checkbox" />
-        <label>I accept Terms &amp; Conditions</label>
+        <label>
+          I accept <Link to="/termsconditions">Terms &amp; Conditions</Link>
+          (Please Read Carefully)
+        </label>
         <div>
-          <button onClick={newPassword}>LogIn</button>
+          <Link to="/">
+            <button onClick={check}>LogIn</button>
+          </Link>
+          <p>{status}</p>
         </div>
         <p>
           *Password needs to be 20 characters long. <br />

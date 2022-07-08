@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-image: 
 }
 
 .App-logo {
@@ -37,8 +38,61 @@
   }
 }
 
+
 table {
   margin: 20px;
   align-items: left;
   border: 1px solid;
+
+
+body {
+  background-color:rgb(140, 34, 108)
+}
+
+.home {
+  background-color: aqua;
+  padding-top: 50px;
+  width:100em;
+  height: 30em;
+}
+h1 {
+  border:2px solid black ;
+
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #61dafb;
+}
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: blue;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+}
+
+.about p {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin: 50px;
+
 }
