@@ -15,10 +15,6 @@ const Home = () => {
         We are the most hooked up group in the bussines<br></br> no cap!
       </p>
 
-      <Link to="/about">
-        <button id="btn">Search Vehicles</button>
-      </Link>
-
       <Link to="/car-list">
         <button id="btn">Search Vehicles</button>
       </Link>

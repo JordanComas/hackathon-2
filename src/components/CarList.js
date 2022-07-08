@@ -5,11 +5,14 @@ import axios from 'axios'
 const Carlist = () => {
 
     const [cars, setCars] = React.useState([])
+    const [carsToDisplay, setCarsToDisplay] = React.useState([])
+
+    const [clickFilter, setClickFilter] = React.useState('')
 
     const options = {
         method: 'GET',
         url: `https://car-data.p.rapidapi.com/cars/`,
-        params: {limit: '20', page: '0'},
+        params: {limit: '50', page: '0'},
         headers: {
           'X-RapidAPI-Key': 'c5d9e92318mshbdf74a4399e20e7p10cf47jsna24ac16729ea',
           'X-RapidAPI-Host': 'car-data.p.rapidapi.com'
@@ -19,15 +22,16 @@ const Carlist = () => {
     const getCars = async () => {
         const response = await axios.request(options)
         setCars(response.data)
+        setCarsToDisplay(response.data)
         // console.log(response.data)
         console.log(cars)
     
         // console.log(allYears)
        }
     
-    // React.useEffect(function() {
-    //     getCars();
-    // },[])
+    React.useEffect(function() {
+        getCars();
+    },[])
 
     let allYears = []
     let allMakes = []
@@ -46,30 +50,41 @@ const Carlist = () => {
     let uniqueModels = [...new Set(allModels)]
     let uniqueTypes = [...new Set(allTypes)]
 
+    const filterCars = (key, el) => {
+        let filteredArr = cars.filter(function (car) {
+            return car[key] === el
+        })
+        setCarsToDisplay(filteredArr)
+    }
+
   return (
     <div>
         <button onClick={getCars} type="button">All</button>
+        <button onClick={() => setClickFilter("year")}>year</button>
+        <button onClick={() => setClickFilter("make")}>make</button>
+        <button onClick={() => setClickFilter("model")}>model</button>
+        <button onClick={() => setClickFilter("type")}>type</button>
         <div>
-            {uniqueYears.map(function(year) {
-                return (<button>{year}</button>)
+            {clickFilter === "year" && uniqueYears.map(function(year) {
+                return (<button onClick={() => filterCars("year", year)}>{year}</button>)
             })}
         </div>
         <div>
-            {uniqueMakes.map(function(make) {
-                return (<button>{make}</button>)
+            {clickFilter === "make" && uniqueMakes.map(function(make) {
+                return (<button onClick={() => filterCars("make", make)}>{make}</button>)
             })}
         </div>
         <div>
-            {uniqueModels.map(function(model) {
-                return (<button>{model}</button>)
+            {clickFilter === "model" && uniqueModels.map(function(model) {
+                return (<button onClick={() => filterCars("model", model)}>{model}</button>)
             })}
         </div>
         <div>
-            {uniqueTypes.map(function(type) {
-                return (<button>{type}</button>)
+            {clickFilter === "type" && uniqueTypes.map(function(type) {
+                return (<button onClick={() => filterCars("type", type)}>{type}</button>)
             })}
         </div>
-        {cars.map(function(car) {
+        {carsToDisplay.map(function(car) {
             return (
                     <table>
                         <tr><b>Year:</b> {car.year}</tr>
