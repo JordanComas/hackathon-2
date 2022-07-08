@@ -45,17 +45,18 @@ table {
 }
 
 .home {
-  background-color: aqua;
-  padding-top: 50px;
-  width: 100em;
-  height: 30em;
+  /* background-color: #DCDBE6; */
+  /* padding-top: 50px; */
+  /* width:  */
+  /* height: 30em; */
 }
 h1 {
   border: 2px solid black;
+  font-family:'League Gothic', sans-serif;
 }
 
 p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family:'Josefin Sans', sans-serif;;
   font-weight: bold;
 }
 nav {
@@ -89,4 +90,15 @@ nav a:hover {
   flex-direction: column;
   width: 700px;
   margin: 50px;
+}
+
+
+#btn {
+ border-radius: 25px;
+ width: 150px;
+  height: 30px;
+}
+
+#hero {
+height:100vh;
 }
