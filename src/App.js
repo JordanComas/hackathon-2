@@ -6,28 +6,28 @@ import Contact from "./components/Contact";
 import Login from "./components/Login";
 import NotFound from "./components/NotFound";
 import About from "./components/About";
-
 import Carlist from "./components/CarList";
-
-import logo from "./images/logo.png";
+import logo from "./images/login.png";
 import Footer from "./components/Footer";
 import TermsConditions from "./components/TermsConditions";
 
-
 function App() {
-
-  <Link to='/car-list'>Search Cars</Link>
+  <Link to="/car-list">Search Cars</Link>;
 
   return (
     <div className="App">
       <header>
         <nav>
-          <Link to="/">
-            <img className="logo" height="70" src={logo} alt="nav-logo" />
+          <Link className="title" to="/">
+            IRONLUX TOYS
           </Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/login">Log In</Link>
+          <div className="links">
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/login">
+              <img height="35" src={logo} />
+            </Link>
+          </div>
         </nav>
       </header>
       <Routes>

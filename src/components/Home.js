@@ -1,14 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import lambo from "../images/takeofflambo.gif"
 
 const Home = () => {
   return (
     <div className="home">
-      <br></br>
+     
+    <img id="hero" src={lambo} width="1450vw" height="400vh" alt=""/>
 
       <h1> IRONLUX TOYS </h1>
       <p>
-        If you work hard You wanna play harder. We are to help you with your
+        If you work hard You wanna play harder. We are here to help you with your
         luxury Toys
       </p>
       <p>
@@ -18,6 +20,7 @@ const Home = () => {
       <Link to="/car-list">
         <button id="btn">Search Vehicles</button>
       </Link>
+      <br></br>
     </div>
   );
 };

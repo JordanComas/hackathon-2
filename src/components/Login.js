@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 const Login = () => {
   const [username, setUsername] = React.useState("");
@@ -16,17 +17,17 @@ const Login = () => {
   const check = (e) => {
     if (password.length < 20) {
       e.preventDefault();
-      setStatus("Password 2 short");
+      setStatus("Password too short");
     } else {
       navigateCreate();
     }
   };
 
   return (
-    <div>
+    <div className="main1">
       <form>
         <div>
-          <label>UserName</label>
+          <label>Username</label>
           <input
             type="text"
             placeholder="UserName"
@@ -45,7 +46,6 @@ const Login = () => {
         <input type="checkbox" />
         <label>
           I accept <Link to="/termsconditions">Terms &amp; Conditions</Link>
-          (Please Read Carefully)
         </label>
         <div>
           <Link to="/">
@@ -53,12 +53,12 @@ const Login = () => {
           </Link>
           <p>{status}</p>
         </div>
-        <p>
-          *Password needs to be 20 characters long. <br />
-          *Do not include your name or birth date on your password. <br />{" "}
-          *Include a capitalize letter so I cant hack you later
-        </p>
       </form>
+      <p>
+        *Password needs to be 20 characters long. <br />
+        *Do not include your name or birth date on your password. <br />{" "}
+        *Include a capitalize letter so I cant hack you later
+      </p>
     </div>
   );
 };
