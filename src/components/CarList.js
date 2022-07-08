@@ -1,6 +1,7 @@
 import React from "react";
 import axios from 'axios'
 // const axios = require("axios");
+import './CarList.css'
 
 const Carlist = () => {
 
@@ -23,10 +24,6 @@ const Carlist = () => {
         const response = await axios.request(options)
         setCars(response.data)
         setCarsToDisplay(response.data)
-        // console.log(response.data)
-        console.log(cars)
-    
-        // console.log(allYears)
        }
     
     React.useEffect(function() {
@@ -57,43 +54,52 @@ const Carlist = () => {
         setCarsToDisplay(filteredArr)
     }
 
+    const click = (value) => {
+        if (clickFilter === value){
+            setClickFilter('')
+        } else {
+            setClickFilter(value)
+        }
+    }
+
   return (
-    <div>
-        <button onClick={getCars} type="button">All</button>
-        <button onClick={() => setClickFilter("year")}>year</button>
-        <button onClick={() => setClickFilter("make")}>make</button>
-        <button onClick={() => setClickFilter("model")}>model</button>
-        <button onClick={() => setClickFilter("type")}>type</button>
-        <div>
-            {clickFilter === "year" && uniqueYears.map(function(year) {
-                return (<button onClick={() => filterCars("year", year)}>{year}</button>)
-            })}
-        </div>
-        <div>
-            {clickFilter === "make" && uniqueMakes.map(function(make) {
-                return (<button onClick={() => filterCars("make", make)}>{make}</button>)
-            })}
-        </div>
-        <div>
+    <div className="car-list">
+        <section className="filter">
+            <ul><button onClick={getCars} type="button">All</button></ul>
+
+            <ul><button onClick={() => click("year")}>Year</button></ul>
+                {clickFilter === "year" && uniqueYears.map(function(year) {
+                    return (<li><button onClick={() => filterCars("year", year)}>{year}</button></li>)
+                })}
+
+            <ul><button onClick={() => click("make")}>Make</button></ul>
+                {clickFilter === "make" && uniqueMakes.map(function(make) {
+                    return (<li><button onClick={() => filterCars("make", make)}>{make}</button></li>)
+                })}
+
+            <ul><button onClick={() => click("model")}>Model</button></ul>
             {clickFilter === "model" && uniqueModels.map(function(model) {
-                return (<button onClick={() => filterCars("model", model)}>{model}</button>)
-            })}
-        </div>
-        <div>
+                    return (<li><button onClick={() => filterCars("model", model)}>{model}</button></li>)
+                })}
+            
+            <ul><button onClick={() => click("type")}>Type</button></ul>
             {clickFilter === "type" && uniqueTypes.map(function(type) {
-                return (<button onClick={() => filterCars("type", type)}>{type}</button>)
+                    return (<li><button onClick={() => filterCars("type", type)}>{type}</button></li>)
+                })}
+        </section>
+
+        <section className="content">
+            {carsToDisplay.map(function(car) {
+                return (
+                        <table>
+                            <tr><b>Year: </b>{car.year}</tr>
+                            <tr><b>Make: </b>{car.make}</tr>
+                            <tr><b>Model: </b>{car.model}</tr>
+                            <tr><b>Type: </b>{car.type}</tr>
+                        </table>
+                )
             })}
-        </div>
-        {carsToDisplay.map(function(car) {
-            return (
-                    <table>
-                        <tr><b>Year:</b> {car.year}</tr>
-                        <tr><b>Make:</b> {car.make}</tr>
-                        <tr><b>Model:</b> {car.model}</tr>
-                        <tr><b>Type:</b> {car.type}</tr>
-                    </table>
-            )
-        })}
+        </section>
     </div>
   )
 };
