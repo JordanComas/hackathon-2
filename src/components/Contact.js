@@ -1,4 +1,5 @@
 import React from "react";
+import ContactUs from "./ContactUs.css";
 const Contact = () => {
   const [firstName, setfirstName] = React.useState("");
   const [lastName, setlastName] = React.useState("");
@@ -20,43 +21,60 @@ const Contact = () => {
     );
   };
   return (
-    <div>
-      <h1>Contact us</h1>
+    <div className="contactusbody">
+      <h1 className="h1font">Contact us</h1>
       <form onSubmit={postMessage}>
-        <p>Name</p>
-        <input
+        <p className="pfont">Name</p>
+        <textarea
+          columns="15"
           type="text"
           placeholder="First Name"
           value={firstName}
           onChange={(e) => setfirstName(e.target.value)}
-        ></input>
-        <input
+        ></textarea>
+
+        <textarea
+          columns="15"
           type="text"
           placeholder="Last Name"
           value={lastName}
           onChange={(e) => setlastName(e.target.value)}
-        ></input>
+        ></textarea>
         <br></br>
-        <p>Phone Number</p>
-        <input
+        <p className="pfont">Phone Number</p>
+        <textarea
+          columns="15"
           type="text"
           placeholder="Phone Number"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-        ></input>
+        ></textarea>
         <br></br>
-        <p>E-mail</p>
-        <input
+        <p className="pfont">E-mail</p>
+        <textarea
           type="text"
           placeholder="E-mail"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-        ></input>
+        ></textarea>
         <br></br>
-        <button type="submit">Submit</button>
+        <br></br>
+        <textarea
+          className="contacttextarea"
+          rows="15"
+          columns="100"
+          type="text"
+          placeholder="Details"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        ></textarea>
+        <br></br>
+        <button className="contactbutton" type="submit">
+          Submit
+        </button>
       </form>
-      <p>{status}</p>
-      <p>{statusTwo}</p>
+      <p className="pfont">{status}</p>
+      <p className="pfont">{statusTwo}</p>
     </div>
   );
 };
