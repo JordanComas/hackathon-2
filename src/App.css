@@ -3,6 +3,7 @@
   background-image: ;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -60,14 +61,13 @@ p {
   font-weight: bold;
 }
 
-
-
 .about p {
   display: flex;
   flex-direction: column;
   width: 700px;
   margin: 50px;
 } */
+
 .title {
   display: flex;
   flex-direction: row;
@@ -112,6 +112,14 @@ body {
   height: 100%;
 }
 
+
+.about p {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin: 50px;
+}
+
 footer {
   margin-top: 600px;
   background-color: #7e112c;
@@ -128,6 +136,4 @@ footer {
 #hero {
 height:100vh;
 }
-
-/* font-family: "Josefin Sans", sans-serif; */
 

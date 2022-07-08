@@ -1,0 +1,42 @@
+.car-list {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #e8f0f0;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.content > table {
+  border: 1px solid;
+  margin: 10px;
+  height: 150px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.filter {
+  padding-right: 50px;
+  /* background-color: #6c7271; */
+}
+
+li {
+  list-style: none;
+  padding-left: 50px;
+}
+
+ul > button {
+  padding: 20px 40px 20px 40px;
+  background-color: #e8f0f0;
+  border-radius: 10px;
+}
