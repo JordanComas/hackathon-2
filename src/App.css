@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-  /* background-image: ; */
+  background-image: ;
 }
 
 .App-logo {
@@ -58,11 +58,35 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
 }
+
+
+
+.about p {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin: 50px;
+} */
+.title {
+  display: flex;
+  flex-direction: row;
+  font-size: 40px;
+  font-family: "League Gothic", sans-serif;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  background-color: #61dafb;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0558bc;
+  height: 90px;
+  padding: 0 20px 0 20px;
 }
 
 nav a {
@@ -71,22 +95,25 @@ nav a {
   justify-content: center;
   align-content: center;
   text-decoration: none;
-  color: black;
+  color: #e8f0f0;
   font-weight: bold;
+  font-family: "League Gothic", sans-serif;
+  font-size: 25px;
+  padding-left: 20px;
 }
 
 nav a:hover {
-  color: blue;
+  color: #6c7271;
 }
 
-.about {
-  display: flex;
-  flex-direction: row;
+body {
+  background-color: #e8f0f0;
+  height: 100%;
 }
 
-.about p {
-  display: flex;
-  flex-direction: column;
-  width: 700px;
-  margin: 50px;
+footer {
+  margin-top: 600px;
+  background-color: #7e112c;
 }
+
+/* font-family: "Josefin Sans", sans-serif; */
